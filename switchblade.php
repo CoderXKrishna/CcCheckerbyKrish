@@ -1,8 +1,8 @@
 <?php
 
-// Switchblade CC Checker - Developed from 1 August 2021 by @rizzyneck
+// Krishna CC Checker - Developed from 6 September 2023 by @itsz_krish_babess
 // Base from Andrymata - Made with ❤
-// Last updated 18 September 2021
+// Last updated 6 September 2023
 // Webhook: https://api.telegram.org/bot<token>/setwebhook?url=<url>
 
 // BOT API Configuration
@@ -22,12 +22,12 @@ $message_id = $update["message"]["message_id"];
 
 // Start Commands
 if ((strpos($message, "/start") === 0)||(strpos($message, "/start") === 0)){
-sendMessage ($chatId, "─ Switchblade Checker Panel ─ %0A⁕ Registered as ➞ @$username %0A⁕ Use ➞ /cmds to show available commands. %0A⁕ Owner ➞ @pentagrvm | Update Logs ➞ @switchbladeupdate", $message_id);
+sendMessage ($chatId, "─ Krishna Checker Panel ─ %0A⁕ Registered as ➞ @$username %0A⁕ Use ➞ /cmds to show available commands. %0A⁕ Owner ➞ @itsz_krish_babess | Update Logs ➞ @Krishna_Cc_Checker", $message_id);
 }
 
 // Cmds Commands
 elseif ((strpos($message, "!cmds") === 0)||(strpos($message, "/cmds") === 0)){
-sendMessage($chatId, "─ Switchblade Commands ─%0A%0A<b>➣ Stripe Charge/Auth [✅]</b>%0AUsage: <code>/chk cc|mm|yy|cvv</code>%0A%0A<b>➣ Check SK Key [✅]</b>%0AUsage: <code>/key sk_live</code>%0A%0A<b>➣ Check Info [✅]</b>%0AUsage: <code>/info</code>%0A%0A<b>➣ Check BIN Info [✅]</b>%0AUsage: <code>/bin xxxxxx</code>%0A%0AContact → <b>@pentagrvm</b>");
+sendMessage($chatId, "─ Krishna Commands ─%0A%0A<b>➣ Stripe Charge/Auth [✅]</b>%0AUsage: <code>/chk cc|mm|yy|cvv</code>%0A%0A<b>➣ Check SK Key [✅]</b>%0AUsage: <code>/key sk_live</code>%0A%0A<b>➣ Check Info [✅]</b>%0AUsage: <code>/info</code>%0A%0A<b>➣ Check BIN Info [✅]</b>%0AUsage: <code>/bin xxxxxx</code>%0A%0AContact → <b>@itsz_krish_babess</b>");
 }
 
 // Bin Check Commands
@@ -297,7 +297,7 @@ curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
 
 // Responses
 
-if ((strpos($result1, 'incorrect_zip')) || (strpos($result1, 'Your card zip code is incorrect.')) || (strpos($result1, 'The zip code you supplied failed validation.'))){
+if ((strpos($result1, 'incorrect_zip')) || (strpos($result1, 'Lode tere card ka zip code galat h badal usko.')) || (strpos($result1, 'Jonsa tu zip code daal raha wo valid na h failed ho rha.'))){
 
 sendMessage($chatId, '<b>𝐒𝐓𝐑𝐈𝐏𝐄 𝐂𝐇𝐀𝐑𝐆𝐄 - 𝟵$</b>%0A𝙲𝙰𝚁𝙳: <code>'.$lista.'</code>%0A𝙲𝙾𝚄𝙽𝚃𝚁𝚈: <b>'.$name1.'</b> %0A𝙲𝚄𝚁𝚁𝙴𝙽𝙲𝚈: <b>'.$currency.' - 💲</b> %0A𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴: <b>Incorrect ZIP Code </b>%0A𝚂𝚃𝙰𝚃𝚄𝚂: <b>CVV PASS (✅)</b>%0A𝙲𝙷𝙴𝙲𝙺𝙴𝙳 𝙱𝚈: <b>@'.$username.'</b> %0A𝚃𝙸𝙼𝙴 𝚃𝙾𝙾𝙺: <b>'.$time.'s</b>');
 }
@@ -306,12 +306,12 @@ elseif ((strpos($result1, '"cvc_check":"pass"')) || (strpos($result1, "Thank You
 sendMessage($chatId, '<b>𝐒𝐓𝐑𝐈𝐏𝐄 𝐂𝐇𝐀𝐑𝐆𝐄 - 𝟵$</b>%0A𝙲𝙰𝚁𝙳: <code>'.$lista.'</code>%0A𝙲𝙾𝚄𝙽𝚃𝚁𝚈: <b>'.$name1.'</b> %0A𝙲𝚄𝚁𝚁𝙴𝙽𝙲𝚈: <b>'.$currency.' - 💲</b> %0A𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴: <b>Charged 9$.%0A𝚂𝚃𝙰𝚃𝚄𝚂: <b>CVV PASS (✅)</b>%0A𝙲𝙷𝙴𝙲𝙺𝙴𝙳 𝙱𝚈: <b>@'.$username.'</b> %0A𝚃𝙸𝙼𝙴 𝚃𝙾𝙾𝙺: <b>'.$time.'s</b>');
 }
 
-elseif ((strpos($result1, 'Your card has insufficient funds.')) || (strpos($result1, 'insufficient_funds'))){
+elseif ((strpos($result1, 'Garib ke bache card me balance nahi h.')) || (strpos($result1, 'Abhi bhi time h card me payment daal de'))){
 sendMessage($chatId, '<b>𝐒𝐓𝐑𝐈𝐏𝐄 𝐂𝐇𝐀𝐑𝐆𝐄 - 𝟵$</b>%0A𝙲𝙰𝚁𝙳: <code>'.$lista.'</code>%0A𝙲𝙾𝚄𝙽𝚃𝚁𝚈: <b>'.$name1.'</b> %0A𝙲𝚄𝚁𝚁𝙴𝙽𝙲𝚈: <b>'.$currency.' - 💲</b> %0A𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴: <b>Insufficient Funds. </b>%0A𝚂𝚃𝙰𝚃𝚄𝚂: <b>CVV PASS (✅)</b>%0A𝙲𝙷𝙴𝙲𝙺𝙴𝙳 𝙱𝚈: <b>@'.$username.'</b> %0A𝚃𝙸𝙼𝙴 𝚃𝙾𝙾𝙺: <b>'.$time.'s</b>');
 }
 
 
-elseif ((strpos($result1, "Your card's security code is incorrect.")) || (strpos($result1, "incorrect_cvc")) || (strpos($result1, "The card's security code is incorrect."))){
+elseif ((strpos($result1, "Chutiye tujhse 3 digit ki cvv bhi thik se na dali ja ri.")) || (strpos($result1, "nirlaj putar cvv sahi daal")) || (strpos($result1, "Kya chutiya h sale cvv shai daal le ."))){
 sendMessage($chatId, '<b>𝐒𝐓𝐑𝐈𝐏𝐄 𝐂𝐇𝐀𝐑𝐆𝐄 - 𝟵$</b>%0A𝙲𝙰𝚁𝙳: <code>'.$lista.'</code>%0A𝙲𝙾𝚄𝙽𝚃𝚁𝚈: <b>'.$name1.'</b> %0A𝙲𝚄𝚁𝚁𝙴𝙽𝙲𝚈: <b>'.$currency.' - 💲</b> %0A𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴: <b>Incorrect CVC. </b>%0A𝚂𝚃𝙰𝚃𝚄𝚂: <b>CCN PASS (✅)</b>%0A𝙲𝙷𝙴𝙲𝙺𝙴𝙳 𝙱𝚈: <b>@'.$username.'</b> %0A𝚃𝙸𝙼𝙴 𝚃𝙾𝙾𝙺: <b>'.$time.'s</b>');
 }
 
