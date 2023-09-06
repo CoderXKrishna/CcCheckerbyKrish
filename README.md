@@ -18,4 +18,4 @@ Last API Scraping: **18th September 2021**
 
 ## Screenshots
 ![Checking](https://te.legra.ph/file/266790fc76019eb96ecf0.png)  
-![Bin Check](https://te.legra.ph/file/266790fc76019eb96ecf0.png)
+![Bin Check](https://graph.org/file/be993ece347929fc18d0e.png)
